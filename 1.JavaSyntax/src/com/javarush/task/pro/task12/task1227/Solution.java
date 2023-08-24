@@ -22,14 +22,11 @@ public class Solution {
 
     public static void rescueRobots(){
         for (int i = 0; i < cableContents.size() ; i++) {
-            if (cableContents.get(i).getName().contains("Amigo")) {
+            if (cableContents.get(i).getName().contains("Amigo") || cableContents.get(i).getName().contains("Diego") ) {
                 rescuedRobots.add(cableContents.get(i));
                 cableContents.remove(i);
             }
-            if(cableContents.get(i).getName().contains("Diego")){
-                rescuedRobots.add(cableContents.get(i));
-                cableContents.remove(i);
-            }
+
         }
     }
 
