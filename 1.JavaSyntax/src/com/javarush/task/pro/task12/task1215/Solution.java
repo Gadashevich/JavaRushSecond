@@ -39,7 +39,7 @@ public class Solution {
         System.out.println("Начинаем разбирать пирамиду...");
 
         for (int i = glasses.size(); i >0 ; i--) {
-            glasses.remove(i-1); //если в for( указать -1 то работать не будет, а если указать в remove i-1 то работает, почему?
+            glasses.remove(i-1);
         }
 
         if(glasses.size() == 0) {
