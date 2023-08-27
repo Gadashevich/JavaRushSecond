@@ -8,7 +8,7 @@ public class CustomStringArrayList {
 
     private int size;
     private int capacity;
-    private String[] elements;
+    public String[] elements;
 
     public CustomStringArrayList() {
         capacity = 10;
@@ -25,16 +25,10 @@ public class CustomStringArrayList {
     }
 
     private void grow() {
-       String[] tmp = new String[capacity];
-        for (int i = 0; i < elements.length ; i++) {
-            tmp[i] = elements[i];
-        }
-        capacity = (int) (capacity *1.5);
-        elements =  new String[capacity];
-        for (int i = 0; i <tmp.length ; i++) {
-            elements[i] = tmp[i];
-        }
-
+        capacity = (int) (capacity * 1.5);
+        String[] tmp = new String[capacity];
+        System.arraycopy(elements, 0, tmp, 0, elements.length);
+        elements = tmp;
     }
 
 }
