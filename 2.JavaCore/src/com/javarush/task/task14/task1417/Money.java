@@ -5,10 +5,11 @@ public abstract class Money {
 
 
     public Money(double amount) {
+        this.amount = amount;
     }
 
     public double getAmount() {
-        return amount;
+        return this.amount;
     }
 
     public abstract String getCurrencyName();
