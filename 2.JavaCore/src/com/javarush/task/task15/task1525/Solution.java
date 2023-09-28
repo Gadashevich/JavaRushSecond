@@ -20,12 +20,11 @@ public class Solution {
 
     static {
         try {
-        FileReader reader = new FileReader(Statics.FILE_NAME);
-        BufferedReader bufferedReader = new BufferedReader(reader);
+        BufferedReader bufferedReader = new BufferedReader( new FileReader(Statics.FILE_NAME));
             while (bufferedReader.ready()){
-
                 lines.add(bufferedReader.readLine());
             }
+            bufferedReader.close();
         }catch (IOException e){
 
         }
